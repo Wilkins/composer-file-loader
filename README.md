@@ -9,10 +9,10 @@ This allow you to load composer.json file without composer (so theorically PHP 5
 Support 
 -------
 
-* PSR-4 : <span style="color:green">**YES**</span>
-* PSR-0 : <span style="color:red">**NO**</span>
-* Classmap : <span style="color:red">**NO**</span>
-* Files : <span style="color:red">**NO**</span>
+* PSR-4 : **YES**
+* PSR-0 : **NO**
+* Classmap : **NO**
+* Files : **NO**
 
 
 Usage
@@ -49,6 +49,18 @@ new CompanyName\PackageName\Bidule();
 new RoutePlanner\Truc();
 new TestNoNamespace();
 ```
+
+
+Testing
+-------
+
+Just go into this directory and run :
+
+```
+php test.php
+```
+
+If no error appears, you're good! 
 
 
 Contribution
