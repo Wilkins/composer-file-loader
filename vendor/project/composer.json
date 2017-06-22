@@ -1,0 +1,15 @@
+{
+    "name": "wilkins/composer-file-loader",
+    "type": "function",
+    "description": "Load composer file",
+    "autoload": {
+        "psr-4": {
+            "": "src2/",
+            "RoutePlanner\\": "src/",
+			"CompanyName\\PackageName\\": [
+				"packages/package-folder/src/",
+				"packages/package-folder1/src/"
+			]
+        }
+    }
+}
