@@ -29,21 +29,24 @@ You have a composer.json file looking like this :
         "psr-4": {
             "": "src2/",
             "RoutePlanner\\": "src/",
-			"CompanyName\\PackageName\\": [
-				"packages/package-folder/src/",
-				"packages/package-folder1/src/"
-			]
+            "CompanyName\\PackageName\\": [
+                "packages/package-folder/src/",
+                "packages/package-folder1/src/"
+            ]
         }
     }
 }
 ```
 
-```php
 
+```php
+// You load the loadPackage function
 include __DIR__.'/loadPackage.php';
 
+// You load your package
 loadPackage(__DIR__."/vendor/project");
 
+// You call the package classes
 new CompanyName\PackageName\Machin();
 new CompanyName\PackageName\Bidule();
 new RoutePlanner\Truc();
@@ -54,7 +57,7 @@ new TestNoNamespace();
 Testing
 -------
 
-Just go into this directory and run :
+Just go into the root directory and run :
 
 ```
 php test.php
