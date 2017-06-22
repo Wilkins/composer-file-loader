@@ -2,5 +2,6 @@
 
 namespace CompanyName\PackageName;
 
-class Machin {
+class Machin
+{
 }

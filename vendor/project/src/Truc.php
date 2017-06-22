@@ -2,5 +2,6 @@
 
 namespace RoutePlanner;
 
-class Truc {
+class Truc
+{
 }

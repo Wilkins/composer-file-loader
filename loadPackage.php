@@ -7,9 +7,9 @@ function loadPackage($dir)
 
     // Foreach namespace specified in the composer, load the given classes
     foreach ($namespaces as $namespace => $classpaths) {
-		if (!is_array($classpaths)) {
-			$classpaths = array($classpaths);
-		}
+        if (!is_array($classpaths)) {
+            $classpaths = array($classpaths);
+        }
         spl_autoload_register(function ($classname) use ($namespace, $classpaths, $dir) {
             // Check if the namespace matches the class we are looking for
             if (preg_match("#^".preg_quote($namespace)."#", $classname)) {
@@ -25,4 +25,4 @@ function loadPackage($dir)
             }
         });
     }
-} 
+}

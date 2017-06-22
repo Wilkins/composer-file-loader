@@ -2,5 +2,6 @@
 
 namespace CompanyName\PackageName;
 
-class Bidule {
+class Bidule
+{
 }
