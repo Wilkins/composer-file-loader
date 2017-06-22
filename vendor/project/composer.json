@@ -10,6 +10,12 @@
                 "packages/package-folder/src/",
                 "packages/package-folder1/src/"
             ]
+        },
+        "psr-0": {
+            "Vendor\\Space\\": "psr0-src1/",
+	    "Monolog\\": ["psr0-src3/", "psr0-src4/"],
+	    "UniqueGlobalClass": "",
+            "": "psr0-src/" 
         }
     }
 }

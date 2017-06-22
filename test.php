@@ -12,8 +12,16 @@ new CompanyName\PackageName\Bidule();
 new RoutePlanner\Truc();
 new TestNoNamespace();
 
+#include __DIR__."/vendor/project/psr0-src1/Vendor/Space/Hello.php";
+
 // Calling PSR-0 classes
-// TODO
+new Vendor\Space\Hello();
+new Monolog\Toto();
+new Monolog\Titi();
+#new Vendor_Namespace_Tete();
+new UniqueGlobalClass();
+new Hello\World();
+
 
 // Calling classmap classes
 // TODO
