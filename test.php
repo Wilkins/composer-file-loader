@@ -1,10 +1,11 @@
 <?php
 
-// Loading loadPackage function
-include __DIR__.'/loadPackage.php';
+// Loading PackageLoader
+include __DIR__.'/PackageLoader.php';
 
 // Loading 'project' package
-loadPackage(__DIR__."/vendor/project");
+$loader = new PackageLoader\PackageLoader();
+$loader->load(__DIR__."/vendor/project");
 
 // Calling PSR-4 classes
 new CompanyName\PackageName\Machin();

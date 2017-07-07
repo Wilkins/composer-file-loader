@@ -10,7 +10,7 @@ Support
 -------
 
 * PSR-4 : **YES**
-* PSR-0 : **NO**
+* PSR-0 : **YES**
 * Classmap : **NO**
 * Files : **NO**
 
@@ -40,11 +40,12 @@ You have a composer.json file looking like this :
 
 
 ```php
-// You load the loadPackage function
-include __DIR__.'/loadPackage.php';
+// You load the PackageLoader
+include __DIR__.'/PackageLoader.php';
 
-// You load your package
-loadPackage(__DIR__."/vendor/project");
+// You load your packages
+$loader = new PackageLoader\PackageLoader();
+$loader->load(__DIR__."/vendor/project");
 
 // You call the package classes
 new CompanyName\PackageName\Machin();
