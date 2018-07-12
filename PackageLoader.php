@@ -15,10 +15,10 @@ class PackageLoader
     {
         $this->dir = $dir;
         $composer = $this->getComposerFile();
-        if(in_array("psr-4",$composer)){
+        if(isset($composer["autoload"]["psr-4"])){
             $this->loadPSR4($composer['autoload']['psr-4']);
         }
-        if(in_array("psr-0",$composer)){
+        if(isset($composer["autoload"]["psr-0"])){
             $this->loadPSR0($composer['autoload']['psr-0']);
         }
     }
