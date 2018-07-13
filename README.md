@@ -12,7 +12,7 @@ Support
 * PSR-4 : **YES**
 * PSR-0 : **YES**
 * Classmap : **NO**
-* Files : **NO**
+* Files : **YES**
 
 
 Usage
