@@ -15,8 +15,24 @@ class PackageLoader
     {
         $this->dir = $dir;
         $composer = $this->getComposerFile();
-        $this->loadPSR4($composer['autoload']['psr-4']);
-        $this->loadPSR0($composer['autoload']['psr-0']);
+        if(isset($composer["autoload"]["psr-4"])){
+            $this->loadPSR4($composer['autoload']['psr-4']);
+        }
+        if(isset($composer["autoload"]["psr-0"])){
+            $this->loadPSR0($composer['autoload']['psr-0']);
+        }
+        if(isset($composer["autoload"]["files"])){
+            $this->loadFiles($composer["autoload"]["files"]);
+        }
+    }
+    
+    public function loadFiles($files){
+        foreach($files as $file){
+            $fullpath = $this->dir."/".$file;
+            if(file_exists($fullpath)){
+                include_once($fullpath);
+            }
+        }
     }
 
     public function loadPSR4($namespaces)
