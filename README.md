@@ -1,9 +1,9 @@
 Composer File Loader
 ====================
 
-Allow you to load composer.json file just as composer would do it.
+Allows you to load a composer.json file just as composer would do it.
 
-This allow you to load composer.json file without composer (so theorically PHP 5.2 is enough)
+This allows you to load composer.json file without composer (so, theoretically, PHP 5.2 is enough).
 
 
 Support 
@@ -58,7 +58,7 @@ new TestNoNamespace();
 Testing
 -------
 
-Just go into the root directory and run :
+Just go into the root directory and run:
 
 ```
 php test.php
@@ -73,6 +73,3 @@ Contribution
 Created by Thibault Taillandier from [this stackoverflow question](https://stackoverflow.com/questions/39571391/psr4-auto-load-without-composer/39774973#39774973).
 
 Please fork it to add more support
-
-
-
