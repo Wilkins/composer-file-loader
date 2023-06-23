@@ -62,7 +62,7 @@ class PackageLoader
                     }
                     $filename = preg_replace("#\\\\#", "/", $classname).".php";
                     foreach ($classpaths as $classpath) {
-                        $fullpath = $this->dir."/".$classpath."/$filename";
+                        $fullpath = $dir."/".$classpath."/$filename";
                         if (file_exists($fullpath)) {
                             include_once $fullpath;
                         }
